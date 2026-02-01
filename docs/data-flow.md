@@ -1,13 +1,26 @@
-# Log Data Flow Explanation
+# Log Data Flow — SIEM Pipeline
 
-1. Windows VM generates system & security logs.
-2. Splunk Universal Forwarder collects event logs.
-3. Logs are forwarded to Splunk Enterprise.
-4. Splunk indexes logs into searchable indexes.
-5. SOC analyst searches logs, creates alerts, and investigates incidents.
+## Step-by-Step Flow
 
-## Log Types Collected
-- Security (Logon failures, authentication)
-- System (Service events)
-- Application (Software activity)
+1. Windows VM generates Security, System, and Application events.
+2. Splunk Universal Forwarder monitors Windows Event Logs.
+3. Forwarder sends logs securely to Splunk Enterprise.
+4. Splunk indexes logs into searchable datasets.
+5. SOC analyst runs detection queries and creates alerts.
+6. Dashboards visualize threats and suspicious behavior.
+
+---
+
+## Log Sources
+
+| Source | Log Type | Purpose |
+|--------|---------|--------|
+| Windows VM | Security Logs | Authentication & access tracking |
+| Windows VM | System Logs | System activity monitoring |
+| Windows VM | Application Logs | Software behavior monitoring |
+
+---
+
+## Security Value
+Ensures continuous monitoring and centralized visibility of endpoint activity.
 
